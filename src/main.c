@@ -52,4 +52,6 @@ void app_main()
     gpio_config(&io_conf);
 
     gpio_set_intr_type(GPIO_INPUT_IO_0, GPIO_INTR_ANYEDGE);
+
+    gpio_evt_queue = xQueueCreate(10,sizeof(uint32_t));
 }
